@@ -84,3 +84,4 @@ print("THE TOTAL PRICE IS: " + str(running_total))
 
 
 # todo: calculate tax, add tax + total
+
