@@ -66,10 +66,26 @@ for selected_id in selected_ids:
                   
 
 print("TOTAL PRICE: " + str(total_price)) #convert to $
+# "the price is ${0:.2f}".format(6.5) #> 'the price is $6.50'
 
 
 
+print("-----------------------------------")
 
+print(" Georges-Corner-Grocery-Store.com")
+
+print("-----------------------------------")
+
+time = datetime.datetime.now()
+
+a = time.strftime("%y")
+b = time.strftime("%m")
+c = time.strftime("%d")
+d = time.strftime("%I")
+e = time.strftime("%M")
+f = time.strftime("%P")
+
+print("CHECKOUT AT: " + a + "-" + b + "-" + c "-" + d + "-" + e + "-" + f + )
 
 
 # A grocery store name of your choice.
