@@ -68,20 +68,23 @@ for selected_id in selected_ids:
     total_price = total_price + matching_product["price"]
     print(" -- " + matching_product["name"] + " (" + to_usd(matching_product["price"]) + ")")
                   
-
+# The total cost of all shopping cart items, formatted as US dollars and cents (e.g. $4.50), calculated as the sum of their prices.
+# The total amount owed, formatted as US dollars and cents (e.g. $4.77), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items.
 # The amount of tax owed, calculated by multiplying the total cost by a District of Columbia sales tax rate of 6%.
 
 
 
+TAX_RATE = .06
 
-# A grocery store name of your choice.
-# A grocery store phone number and/or website URL and/or address of choice.
+tax = total_price * TAX_RATE
 
+You_Pay = total_price + tax
 
-print(" George's Corner Grocery Store")
-print(" www.georgescorner.com")
-
-
+print("-----------------------------------")
+print(" PRICE: " + to_usd(total_price)) 
+print(" TAX: " + to_usd(tax))
+print(" YOU PAY: " + to_usd(You_Pay))
+print("-----------------------------------")
 
 # The date and time of the beginning of the checkout process, formatted in a human-friendly way.
 
@@ -89,88 +92,19 @@ print(" www.georgescorner.com")
 
 now = datetime.datetime.now()
 
-print("CHECKOUT AT: ")
-print(str(now))
+#print(" CHECKOUT AT: " + (str(now))) 
+print(now.strftime("%Y-%m-%d %H:%M:%S"))
 
-# print(now.strftime("%Y-%m-%d"))
+# "%H:%M:%S"
 
-
-
-
-
-
-
+# A grocery store name of your choice.
+# A grocery store phone number and/or website URL and/or address of choice.
 # A friendly message thanking the customer and/or encouraging the customer to shop again.
 
 print("-----------------------------------")
-print("Thank you for shopping at George's. Please come again.")
+print(" George's Corner Grocery Store")
+print(" www.georgescorner.com")
+print(" Thank you for shopping at George's. Please come again.")
 print("-----------------------------------")
 
-
-
-
-# The total cost of all shopping cart items, formatted as US dollars and cents (e.g. $4.50), calculated as the sum of their prices.
-# The total amount owed, formatted as US dollars and cents (e.g. $4.77), calculated by adding together the amount of tax owed plus the total cost of all shopping cart items.
-
-
-
-
-
-
-# print("CHECKOUT AT: " + a + "-" + b + "-" + c "-" + d + "-" + e + "-" + f + )
-
-
-# x = 1
-# running_total = 0
-
-# idnum = input("Please enter the product identifier: ")
-
-# while idnum != "DONE"
-
-
-
-
-
-
-# while x < 5: # todo: restor infinite looping condition
-#     selected_id = 1
-#     product = {
-#         "id":1, 
-#         "name": "Chocolate Sandwich Cookies", 
-#         "department": "snacks", 
-#         "aisle": "cookies cakes", 
-#         "price": 3.50
-#     }
-#     matching_products = [p for p in products if p["id"] == selected_id]
-#     product = matching_products[0]
-#     price = product["price"] #4.95 # todo: lookup actual price of the scanned/selected product
-#     running_total = running_total + price
-#     x = x + 1
-
-# print("THE TOTAL PRICE IS: " + str(running_total))
-
-
-# t = datetime.datetime.now()
-# print(type(t))
-# print(t)
-
-
-# todo: calculate tax, add tax + total
-
-
-
-#
-# some commented-out loop
-# ... representing the result of the first checkpoint (if you did it)
-# ... which accepts user inputs
-# ... and prints the results
-# ... and which we are temporarily ignoring
-# ... (yours will actually be some working python code)
-#
-
-# product_ids = [1, 8, 6, 16, 6] # temporary list of valid ids for testing purposes
-
-# print("SHOPPING CART ITEM IDENTIFIERS INCLUDE:", product_ids)
-
-# #TODO: perform product look-ups here!
 
