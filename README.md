@@ -21,7 +21,8 @@ Then follow the on screen instructions.
 # Testing
 
 Create a virtual environment and run the following command within the virtual environment:
-pip install pytest
+
+*pip install pytest
 
 # To test, run the following command:
 
